@@ -43,6 +43,12 @@ ROI_CROP_BOTTOM = 10                 #the number of rows of pixels to ignore on 
 STEERING_LEFT_PWM = 460         #pwm value for full left steering
 STEERING_RIGHT_PWM = 290        #pwm value for full right steering
 
+#THROTTLE
+# THROTTLE_CHANNEL = 1            #channel on the 9685 pwm board 0-15
+# THROTTLE_FORWARD_PWM = 420      #pwm value for max forward throttle, default: 420
+# THROTTLE_STOPPED_PWM = 370      #pwm value for no movement, default: 370
+# THROTTLE_REVERSE_PWM = 330      #pwm value for max reverse throttle, default: 330
+
 # #STEERING FOR PIGPIO_PWM
 # STEERING_PWM_PIN = 13           #Pin numbering according to Broadcom numbers
 # STEERING_PWM_FREQ = 50          #Frequency for PWM
@@ -75,14 +81,14 @@ STEERING_RIGHT_PWM = 290        #pwm value for full right steering
 
 # #JOYSTICK
 # USE_JOYSTICK_AS_DEFAULT = False     #when starting the manage.py, when True, will not require a --js option to use the joystick
-JOYSTICK_MAX_THROTTLE = 0.5         # [0,1], this scalar is multiplied with the throttle value (-1 to 1) to limit the maximum throttle. This can help if you drop the controller or just don't need the full speed available.
+JOYSTICK_MAX_THROTTLE = 0.4         # [0,1], this scalar is multiplied with the throttle value (-1 to 1) to limit the maximum throttle. This can help if you drop the controller or just don't need the full speed available.
 # JOYSTICK_STEERING_SCALE = 1.0       #some people want a steering that is less sensitve. This scalar is multiplied with the steering -1 to 1. It can be negative to reverse dir.
 # AUTO_RECORD_ON_THROTTLE = True      #if true, we will record whenever throttle is not zero. if false, you must manually toggle recording with some other trigger. Usually circle button on joystick.
 # JOYSTICK_DEADZONE = 0.0             # when non zero, this is the smallest throttle before recording triggered.
 # JOYSTICK_THROTTLE_DIR = -1.0        # use -1.0 to flip forward/backward, use 1.0 to use joystick's natural forward/backward
 # USE_FPV = False                     # send camera data to FPV webserver
 # JOYSTICK_DEVICE_FILE = "/dev/input/js0" # this is the unix file use to access the joystick.
-GENTLE_THROTTLE = 0.5
+GENTLE_THROTTLE = 0.4
 RAGE_THROTTLE = 0.7
 # PER_THROTTLE_STEP = 0.05
 
